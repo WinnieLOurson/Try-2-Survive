@@ -19,16 +19,25 @@ var button3;
 var button4;
 
 var score = 0;
-var succes = 0;
+var reussite = 0;
 
 function requete (ordre){
     
-    alert("presser le bouton numéro" + ordre);
+    alert("pressez le bouton numéro" + ordre);
 
 }
 
 var ordre = nb_aleatoire(1, 4);
 requete(ordre);
+
+function actReussite () {
+    if (reussite > 0){
+        alert ("oui");
+        var ordre = nb_aleatoire(1, 4);
+        requete(ordre);
+        reussite = 0;
+    }
+}
 
 function update () {
     
@@ -73,23 +82,25 @@ function actionOnClick1 () {
     if (ordre == 1) {
         alert ("bien joué");
         score = score+1;
-        succes = succes+1;
+        reussite = 1;
         alert (score);
+        actReussite(reussite);
     } else {
         alert ("bah non");
-        succes = 0;
-    }   
+        reussite = 0;
+    }
 }
 
 function actionOnClick2 () {
     if (ordre == 2) {
         alert ("bien joué"); 
         score = score+1;
-        succes = succes+1;
+        reussite = 1;
         alert (score);
+        actReussite(reussite);
     } else {
         alert ("bah non");
-        succes = 0;
+        reussite = 0;
     }
 }
 
@@ -97,11 +108,12 @@ function actionOnClick3 () {
     if (ordre == 3) {
         alert ("bien joué"); 
         score = score+1;
-        succes = succes+1;
+        reussite = 1;
         alert (score);
+        actReussite(reussite);
     } else {
         alert ("bah non");
-        succes = 0;
+        reussite = 0;
     }
 }
 
@@ -109,24 +121,12 @@ function actionOnClick4 () {
     if (ordre == 4) {
         alert ("bien joué"); 
         score = score+1;
-        succes = succes+1;
+        reussite = 1;
         alert (score);
+        actReussite(reussite);
     } else {
         alert ("bah non");
-        succes = 0;
+        reussite = 0;
     }
-}
-
-function actSucces () {
-    if (succes > 0){
-        alert ("oui");
-        var ordre = nb_aleatoire(1, 4);
-        requete(ordre);
-    }
-}
-
-
-
-function render () {
-
+    
 }

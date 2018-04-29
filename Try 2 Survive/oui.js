@@ -33,7 +33,7 @@ requete(ordre);
 function actReussite () {
     if (reussite > 0){
         alert ("oui");
-        var ordre = nb_aleatoire(1, 4);
+        ordre = nb_aleatoire(1, 4);
         requete(ordre);
         reussite = 0;
     }

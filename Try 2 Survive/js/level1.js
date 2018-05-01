@@ -13,12 +13,15 @@ var Level1 = {
 		game.load.image('button 3.2', 'img/coeur.jpg');
 		game.load.image('button 3.3', 'img/coeur.jpg');
 		game.load.image('button 3.4', 'img/coeur.jpg');
+		game.load.image('background', 'img/herbe verte.jpg');
 	},
 	
 	create: function () {
 		ordre = nb_aleatoire(1, 4);
 		requete(ordre);
 		
+		game.add.tileSprite(0, 0, 800, 600, 'background');
+
 		//  Standard button (also used as our pointer tracker)
 		button1 = game.add.button(100, 100, 'button 3.1', actionOnClick1, this, 2, 1, 0);
 		button1.anchor.setTo(0.5, 0.5);

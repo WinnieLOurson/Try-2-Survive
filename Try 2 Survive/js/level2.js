@@ -13,6 +13,7 @@ var Level2 = {
 		game.load.image('button 3.2', 'img/coeur.jpg');
 		game.load.image('button 3.3', 'img/coeur.jpg');
 		game.load.image('button 3.4', 'img/coeur.jpg');
+		
 	},
 	
 	create: function () {

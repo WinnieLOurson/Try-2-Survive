@@ -2,6 +2,7 @@
 const width = window.innerWidth * window.devicePixelRatio;
 const height = window.innerHeight * window.devicePixelRatio;
 
+
 var game = new Phaser.Game(width, height, Phaser.CANVAS, 'game');
 var score = 0;
 
@@ -11,8 +12,8 @@ var buttonA, buttonB, buttonC, buttonD;
 var reussite = 0, ordre = 0;
 
 // c'est les conditions pour passer aux autres niveaux
-const goToLevel2 = 2;
-const goToLevel3 = 3;
+const goToLevel2 = 5;
+const goToLevel3 = 10;
 
 game.state.add('Level1', Level1);
 game.state.start('Level1');

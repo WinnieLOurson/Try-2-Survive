@@ -51,18 +51,16 @@ function actReussite () {
     }
 }
 
-// cette fonction met à jour la variable textOrdre
-// en fonction de l'ordre
 function updateTextOrdre() {
 	if (level == 1) {
 		if (ordre == 1) 
-			textOrdre = "wallah";
+			textOrdre = "concombre";
 		else if (ordre == 2) 
-			textOrdre = "starfoullah";
+			textOrdre = "il te vaulait ton gouter";
 		else if (ordre == 3) 
-			textOrdre = "suka blyat";
+			textOrdre = "boule sur patte";
 		else if (ordre == 4) 
-			textOrdre = "chuis rattatattak";
+			textOrdre = "super pour se gratter l'oreil";
 	}
 	else if (level == 2) {
 		if (ordre == 1) 
@@ -80,7 +78,6 @@ function updateTextOrdre() {
 
 function actionOnClick1 (buttonId) {
     if (ordre == 1) {
-        alert ("bien joué");
         score = score+1;
         reussite = 1;
         actReussite(reussite);
@@ -91,8 +88,7 @@ function actionOnClick1 (buttonId) {
 }
 
 function actionOnClick2 () {
-    if (ordre == 2) {
-        alert ("bien joué"); 
+    if (ordre == 2) { 
         score = score+1;
         reussite = 1;
         actReussite(reussite);
@@ -104,7 +100,6 @@ function actionOnClick2 () {
 
 function actionOnClick3 () {
     if (ordre == 3) {
-        alert ("bien joué"); 
         score = score+1;
         reussite = 1;
         actReussite(reussite);
@@ -116,7 +111,6 @@ function actionOnClick3 () {
 
 function actionOnClick4 () {
     if (ordre == 4) {
-        alert ("bien joué"); 
         score = score+1;
         reussite = 1;
         actReussite(reussite);

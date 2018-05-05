@@ -10,10 +10,9 @@ var life = 5;
 var button1, button2, button3, button4;
 var buttonA, buttonB, buttonC, buttonD;
 
-var reussite = 0, ordre = 0, textOrdre = "";
+var reussite = 0, ordre = 0;
 
 // c'est les conditions pour passer aux autres niveaux
-var level = 1;
 const goToLevel2 = 5;
 const goToLevel3 = 10;
 
@@ -34,35 +33,41 @@ function nb_aleatoire(min,max){
 	return Math.floor(nb);
 }
 
-
-// on pourrait remplacer cette fonction requete(ordre) directement par updateTextOrdre();
-// mais grosse flemme de modifier tout le code
 function requete(ordre) {
-	updateTextOrdre();
+    //alert("pressez le bouton numéro" + ordre);
 }
 
 function actReussite () {
     if (reussite > 0){
-        ordre = nb_aleatoire(1, 4);		
-
+        ordre = nb_aleatoire(1, 4);
         requete(ordre);
         reussite = 0;    
-            
+        bmpText.setText(ordre);    
     }
 }
 
-// cette fonction met à jour la variable textOrdre
-// en fonction de l'ordre
+function up() {
+    console.log('button up', arguments);
+}
+
+function over() {
+    console.log('button over');
+}
+
+function out() {
+    console.log('button out');
+}
+
 function updateTextOrdre() {
 	if (level == 1) {
 		if (ordre == 1) 
-			textOrdre = "wallah";
+			textOrdre = "concombre";
 		else if (ordre == 2) 
-			textOrdre = "starfoullah";
+			textOrdre = "il te vaulait ton gouter";
 		else if (ordre == 3) 
-			textOrdre = "suka blyat";
+			textOrdre = "boule sur patte";
 		else if (ordre == 4) 
-			textOrdre = "chuis rattatattak";
+			textOrdre = "super pour se gratter l'oreil";
 	}
 	else if (level == 2) {
 		if (ordre == 1) 
@@ -73,14 +78,13 @@ function updateTextOrdre() {
 			textOrdre = "brebis";
 		else if (ordre == 4) 
 			textOrdre = "kouapal";
-	}
+    }
 	
-	bmpText.setText(textOrdre);
+bmpText.setText(textOrdre);
 }
 
-function actionOnClick1 (buttonId) {
+function actionOnClick1 () {
     if (ordre == 1) {
-        alert ("bien joué");
         score = score+1;
         reussite = 1;
         actReussite(reussite);
@@ -91,8 +95,7 @@ function actionOnClick1 (buttonId) {
 }
 
 function actionOnClick2 () {
-    if (ordre == 2) {
-        alert ("bien joué"); 
+    if (ordre == 2) { 
         score = score+1;
         reussite = 1;
         actReussite(reussite);
@@ -103,8 +106,7 @@ function actionOnClick2 () {
 }
 
 function actionOnClick3 () {
-    if (ordre == 3) {
-        alert ("bien joué"); 
+    if (ordre == 3) { 
         score = score+1;
         reussite = 1;
         actReussite(reussite);
@@ -115,8 +117,7 @@ function actionOnClick3 () {
 }
 
 function actionOnClick4 () {
-    if (ordre == 4) {
-        alert ("bien joué"); 
+    if (ordre == 4) { 
         score = score+1;
         reussite = 1;
         actReussite(reussite);

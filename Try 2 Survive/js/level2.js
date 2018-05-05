@@ -17,6 +17,9 @@ var Level2 = {
 	},
 	
 	create: function () {
+		ordre = nb_aleatoire(1, 4);
+		requete(ordre);
+		
 		game.add.tileSprite(0, 0, 800, 600, 'background');
 
 		//  Standard button (also used as our pointer tracker)
@@ -47,12 +50,11 @@ var Level2 = {
 		scoreText = game.add.bitmapText(500, 500, 'carrier_command', "score = " + score, 34);
     	scoreText.inputEnabled = true;
 		scoreText.input.enableDrag();
-		
-		ordre = nb_aleatoire(1, 4);
-		requete(ordre);
 	},
 
 	update: function () {
+		
+		console.log("score -> " + score);		
 		
 		lifeText.setText("life = " + life);
 		scoreText.setText("score = " + score); 
@@ -61,7 +63,6 @@ var Level2 = {
 		// button2.angle = button2.angle + 5;
 		
 		if (score >= goToLevel3) {
-			
 			console.log("ON PASSE AU NIVEAU 3!!! :o");
 			
 			game.state.add('Level3', Level3);

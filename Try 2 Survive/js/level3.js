@@ -16,7 +16,10 @@ var Level3 = {
 		game.load.bitmapFont('carrier_command', 'assets/fonts/carrier_command.png', 'assets/fonts/carrier_command.xml');
 	},
 
-	 create: function () {
+	create: function () {
+		ordre = nb_aleatoire(1, 4);
+		requete(ordre);
+		
 		game.add.tileSprite(0, 0, 800, 600, 'background');
 
 		//  Standard button (also used as our pointer tracker)
@@ -48,9 +51,6 @@ var Level3 = {
 		scoreText = game.add.bitmapText(500, 500, 'carrier_command', "score = " + score, 34);
     	scoreText.inputEnabled = true;
 		scoreText.input.enableDrag();
-		
-		ordre = nb_aleatoire(1, 4);
-		requete(ordre);
 
 	},
 

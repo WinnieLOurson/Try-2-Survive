@@ -21,7 +21,7 @@ var Level3 = {
 		requete(ordre);
 		
 		game.add.tileSprite(0, 0, 800, 600, 'background');
-		
+
 		//  Standard button (also used as our pointer tracker)
 		button1 = game.add.button(100, 100, 'button 1.1', actionOnClick1, this, 2, 1, 0);
 		button1.anchor.setTo(0.5, 0.5);
@@ -55,7 +55,7 @@ var Level3 = {
 	},
 
 	update: function () {
-		lifeText.setText("life = ")
+		lifeText.setText("life = " + life);
 		scoreText.setText("score = " + score); 
 		
 		button2.angle += 5;

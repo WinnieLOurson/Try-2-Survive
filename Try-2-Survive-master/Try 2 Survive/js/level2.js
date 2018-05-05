@@ -39,7 +39,7 @@ var Level2 = {
 		button4 = game.add.button(500, 500, 'button 2.4' , actionOnClick4, this, 2, 1, 0);
 		button4.anchor.setTo(0.5, 0.5);
 
-		bbmpText = game.add.bitmapText(500, 100, 'carrier_command', + ordre,34);
+		bmpText = game.add.bitmapText(500, 100, 'carrier_command', + ordre,34);
     	bmpText.inputEnabled = true;
 		bmpText.input.enableDrag();
 
@@ -50,13 +50,13 @@ var Level2 = {
 		scoreText = game.add.bitmapText(500, 500, 'carrier_command', "score = " + score, 34);
     	scoreText.inputEnabled = true;
 		scoreText.input.enableDrag();
-
 	},
+
 	update: function () {
 		
 		console.log("score -> " + score);		
 		
-		lifeText.setText("life = ")
+		lifeText.setText("life = " + life);
 		scoreText.setText("score = " + score); 
 
 		button2.angle += 5;

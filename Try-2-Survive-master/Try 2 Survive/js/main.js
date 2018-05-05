@@ -5,6 +5,7 @@ const height = window.innerHeight * window.devicePixelRatio;
 
 var game = new Phaser.Game(width, height, Phaser.CANVAS, 'game');
 var score = 0;
+var life = 5; 
 
 var button1, button2, button3, button4;
 var buttonA, buttonB, buttonC, buttonD;
@@ -65,7 +66,7 @@ function actionOnClick1 () {
         reussite = 1;
         actReussite(reussite);
     } else {
-        alert ("bah non");
+        life--;
         reussite = 0;
     }
 }
@@ -77,7 +78,7 @@ function actionOnClick2 () {
         reussite = 1;
         actReussite(reussite);
     } else {
-        alert ("bah non");
+        life--;
         reussite = 0;
     }
 }
@@ -89,7 +90,7 @@ function actionOnClick3 () {
         reussite = 1;
         actReussite(reussite);
     } else {
-        alert ("bah non");
+        life--;
         reussite = 0;
     }
 }
@@ -101,7 +102,7 @@ function actionOnClick4 () {
         reussite = 1;
         actReussite(reussite);
     } else {
-        alert ("bah non");
+        life--;
         reussite = 0;
     }
     

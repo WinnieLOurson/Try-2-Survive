@@ -1,10 +1,10 @@
 var Level1 = {
 		
 	preload: function () {
-		game.load.image('button 1.1', 'img/smiley.jpg');
-		game.load.image('button 1.2', 'img/smiley.jpg');
-		game.load.image('button 1.3', 'img/smiley.jpg');
-		game.load.image('button 1.4', 'img/smiley.jpg');
+		game.load.image('button 1.1', 'img/lvl 1/1.jpg');
+		game.load.image('button 1.2', 'img/lvl 1/2.jpg');
+		game.load.image('button 1.3', 'img/lvl 1/3.jpg');
+		game.load.image('button 1.4', 'img/lvl 1/4.jpg');
 		game.load.image('button 2.1', 'img/smiley.jpg');
 		game.load.image('button 2.2', 'img/smiley.jpg');
 		game.load.image('button 2.3', 'img/smiley.jpg');
@@ -51,13 +51,18 @@ var Level1 = {
 	
 		scoreText = game.add.bitmapText(500, 500, 'carrier_command', "score = " + score, 34);
     	scoreText.inputEnabled = true;
-		scoreText.input.enableDrag();},
+		scoreText.input.enableDrag();
+	},
+
+	request: function(){
+
+	},
 
 	update: function () {
 		
 		console.log("score -> " + score);		
 		
-		lifeText.setText("life = ")
+		lifeText.setText("life = " + life);
 		scoreText.setText("score = " + score); 
 
 		button2.angle += 5;

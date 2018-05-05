@@ -17,16 +17,12 @@ var Level1 = {
 		game.load.bitmapFont('carrier_command', 'assets/fonts/carrier_command.png', 'assets/fonts/carrier_command.xml');
 	},
 	
-	create: function () {
-		ordre = nb_aleatoire(1, 4);
-		requete(ordre);
-		
+	create: function () {		
 		game.add.tileSprite(0, 0, 800, 600, 'background');
 
 		//  Standard button (also used as our pointer tracker)
 		button1 = game.add.button(100, 100, 'button 3.1', actionOnClick1, this, 2, 1, 0);
 		button1.anchor.setTo(0.5, 0.5);
-
 
 		//  Rotated button
 		button2 = game.add.button(100, 500, 'button 3.2', actionOnClick3, this, 2, 1, 0);
@@ -52,6 +48,9 @@ var Level1 = {
 		scoreText = game.add.bitmapText(500, 500, 'carrier_command', "score = " + score, 34);
     	scoreText.inputEnabled = true;
 		scoreText.input.enableDrag();
+		
+		ordre = nb_aleatoire(1, 4);
+		requete(ordre);
 	},
 
 	request: function(){
@@ -60,8 +59,6 @@ var Level1 = {
 
 	update: function () {
 		
-		console.log("score -> " + score);		
-		
 		lifeText.setText("life = " + life);
 		scoreText.setText("score = " + score); 
 
@@ -69,6 +66,7 @@ var Level1 = {
 		// button2.angle = button2.angle + 5;
 		
 		if (score >= goToLevel2) {
+			level++;
 			console.log("ON PASSE AU NIVEAU 2!!! :o");
 			
 			game.state.add('Level2', Level2);

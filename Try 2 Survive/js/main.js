@@ -10,9 +10,10 @@ var life = 5;
 var button1, button2, button3, button4;
 var buttonA, buttonB, buttonC, buttonD;
 
-var reussite = 0, ordre = 0;
+var reussite = 0, ordre = 0, textOrdre = "";
 
 // c'est les conditions pour passer aux autres niveaux
+var level = 1;
 const goToLevel2 = 5;
 const goToLevel3 = 10;
 
@@ -33,33 +34,51 @@ function nb_aleatoire(min,max){
 	return Math.floor(nb);
 }
 
+
+// on pourrait remplacer cette fonction requete(ordre) directement par updateTextOrdre();
+// mais grosse flemme de modifier tout le code
 function requete(ordre) {
-    //alert("pressez le bouton numéro" + ordre);
+	updateTextOrdre();
 }
 
 function actReussite () {
     if (reussite > 0){
-        ordre = nb_aleatoire(1, 4);
+        ordre = nb_aleatoire(1, 4);		
 
         requete(ordre);
         reussite = 0;    
-        bmpText.setText(ordre);    
+            
     }
 }
 
-function up() {
-    console.log('button up', arguments);
+// cette fonction met à jour la variable textOrdre
+// en fonction de l'ordre
+function updateTextOrdre() {
+	if (level == 1) {
+		if (ordre == 1) 
+			textOrdre = "wallah";
+		else if (ordre == 2) 
+			textOrdre = "starfoullah";
+		else if (ordre == 3) 
+			textOrdre = "suka blyat";
+		else if (ordre == 4) 
+			textOrdre = "chuis rattatattak";
+	}
+	else if (level == 2) {
+		if (ordre == 1) 
+			textOrdre = "on";
+		else if (ordre == 2) 
+			textOrdre = "pelle";
+		else if (ordre == 3) 
+			textOrdre = "brebis";
+		else if (ordre == 4) 
+			textOrdre = "kouapal";
+	}
+	
+	bmpText.setText(textOrdre);
 }
 
-function over() {
-    console.log('button over');
-}
-
-function out() {
-    console.log('button out');
-}
-
-function actionOnClick1 () {
+function actionOnClick1 (buttonId) {
     if (ordre == 1) {
         alert ("bien joué");
         score = score+1;

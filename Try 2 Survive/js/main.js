@@ -10,9 +10,10 @@ var life = 5;
 var button1, button2, button3, button4;
 var buttonA, buttonB, buttonC, buttonD;
 
-var reussite = 0, ordre = 0;
+var reussite = 0, ordre = 0, textOrdre = "";
 
 // c'est les conditions pour passer aux autres niveaux
+var level = 1;
 const goToLevel2 = 5;
 const goToLevel3 = 10;
 
@@ -33,34 +34,23 @@ function nb_aleatoire(min,max){
 	return Math.floor(nb);
 }
 
+
+// on pourrait remplacer cette fonction requete(ordre) directement par updateTextOrdre();
+// mais grosse flemme de modifier tout le code
 function requete(ordre) {
-    //alert("pressez le bouton numéro" + ordre);
+	updateTextOrdre();
 }
 
 function actReussite () {
     if (reussite > 0){
-        ordre = nb_aleatoire(1, 4);
+        ordre = nb_aleatoire(1, 4);		
+
         requete(ordre);
         reussite = 0;    
-        bmpText.setText(ordre);    
+            
     }
 }
 
-<<<<<<< HEAD
-=======
-function up() {
-    console.log('button up', arguments);
-}
-
-function over() {
-    console.log('button over');
-}
-
-function out() {
-    console.log('button out');
-}
-
->>>>>>> ea15e0070839a603149d3ad0c5899771c889fc2b
 function updateTextOrdre() {
 	if (level == 1) {
 		if (ordre == 1) 
@@ -81,12 +71,12 @@ function updateTextOrdre() {
 			textOrdre = "brebis";
 		else if (ordre == 4) 
 			textOrdre = "kouapal";
-    }
+	}
 	
-bmpText.setText(textOrdre);
+	bmpText.setText(textOrdre);
 }
 
-function actionOnClick1 () {
+function actionOnClick1 (buttonId) {
     if (ordre == 1) {
         score = score+1;
         reussite = 1;
@@ -109,11 +99,7 @@ function actionOnClick2 () {
 }
 
 function actionOnClick3 () {
-<<<<<<< HEAD
     if (ordre == 3) {
-=======
-    if (ordre == 3) { 
->>>>>>> ea15e0070839a603149d3ad0c5899771c889fc2b
         score = score+1;
         reussite = 1;
         actReussite(reussite);
@@ -124,11 +110,7 @@ function actionOnClick3 () {
 }
 
 function actionOnClick4 () {
-<<<<<<< HEAD
     if (ordre == 4) {
-=======
-    if (ordre == 4) { 
->>>>>>> ea15e0070839a603149d3ad0c5899771c889fc2b
         score = score+1;
         reussite = 1;
         actReussite(reussite);

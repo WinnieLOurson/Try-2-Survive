@@ -1,18 +1,18 @@
 var Level2 = {
 	
 	preload: function () {
-		game.load.image('button 1.1', 'img/lvl 1/1.jpg');
-	game.load.image('button 1.2', 'img/lvl 1/2.jpg');
-	game.load.image('button 1.3', 'img/lvl 1/3.jpg');
-	game.load.image('button 1.4', 'img/lvl 1/4.jpg');
-	game.load.image('button 2.1', 'img/lvl 2/1.jpg');
-	game.load.image('button 2.2', 'img/lvl 2/2.jpg');
-	game.load.image('button 2.3', 'img/lvl 2/3.jpg');
-	game.load.image('button 2.4', 'img/lvl 2/4.jpg');
-	game.load.image('button 3.1', 'img/lvl 3/1.jpg');
-	game.load.image('button 3.2', 'img/lvl 3/2.jpg');
-	game.load.image('button 3.3', 'img/lvl 3/3.jpg');
-	game.load.image('button 3.4', 'img/lvl 3/4.jpg');
+		game.load.image('button 1.1', 'img/lvl 1/1.png');
+	game.load.image('button 1.2', 'img/lvl 1/2.png');
+	game.load.image('button 1.3', 'img/lvl 1/3.png');
+	game.load.image('button 1.4', 'img/lvl 1/4.png');
+	game.load.image('button 2.1', 'img/lvl 2/1.png');
+	game.load.image('button 2.2', 'img/lvl 2/2.png');
+	game.load.image('button 2.3', 'img/lvl 2/3.png');
+	game.load.image('button 2.4', 'img/lvl 2/4.png');
+	game.load.image('button 3.1', 'img/lvl 3/1.png');
+	game.load.image('button 3.2', 'img/lvl 3/2.png');
+	game.load.image('button 3.3', 'img/lvl 3/3.png');
+	game.load.image('button 3.4', 'img/lvl 3/4.png');
 	game.load.image('background', 'img/herbe verte.jpg');
 	game.load.bitmapFont('carrier_command', 'assets/fonts/carrier_command.png', 'assets/fonts/carrier_command.xml');
 

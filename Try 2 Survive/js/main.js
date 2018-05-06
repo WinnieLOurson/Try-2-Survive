@@ -56,21 +56,31 @@ function updateTextOrdre() {
 		if (ordre == 1) 
 			textOrdre = "concombre";
 		else if (ordre == 2) 
-			textOrdre = "il te vaulait ton gouter";
-		else if (ordre == 3) 
 			textOrdre = "boule sur patte";
+		else if (ordre == 3) 
+			textOrdre = "il te volait ton gouter";
 		else if (ordre == 4) 
 			textOrdre = "super pour se gratter l'oreil";
 	}
 	else if (level == 2) {
 		if (ordre == 1) 
-			textOrdre = "on";
+			textOrdre = "tchoutchou";
 		else if (ordre == 2) 
-			textOrdre = "pelle";
+			textOrdre = "je tombe!";
 		else if (ordre == 3) 
-			textOrdre = "brebis";
+			textOrdre = "mousaillon";
 		else if (ordre == 4) 
-			textOrdre = "kouapal";
+			textOrdre = "blessure au pied";
+    }
+    else if (level == 3) {
+		if (ordre == 1) 
+			textOrdre = "feru";
+		else if (ordre == 2) 
+			textOrdre = "urus";
+		else if (ordre == 3) 
+			textOrdre = "tburizas";
+		else if (ordre == 4) 
+			textOrdre = "jera";
 	}
 	
 	bmpText.setText(textOrdre);

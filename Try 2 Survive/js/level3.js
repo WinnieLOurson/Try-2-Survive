@@ -13,12 +13,14 @@ var Level3 = {
 		game.load.image('button 3.2', 'img/lvl 3/2.jpg');
 		game.load.image('button 3.3', 'img/lvl 3/3.jpg');
 		game.load.image('button 3.4', 'img/lvl 3/4.jpg');
-		game.load.image('background', 'img/herbe verte.jpg');
+		game.load.image('background 1', 'img/wallpaper 1.bmp');
+		game.load.image('background 2', 'img/wallpaper 2.bmp');
+		game.load.image('background 3', 'img/wallpaper 3.bmp');
 		game.load.bitmapFont('carrier_command', 'assets/fonts/carrier_command.png', 'assets/fonts/carrier_command.xml');
 	},
 
 	 create: function () {
-		game.add.tileSprite(0, 0, 800, 600, 'background');
+		game.add.tileSprite(0, 0, width, height, 'background 3');
 
 		//  Rotated button
 		button1 = game.add.button(170, 100, 'button 3.1', actionOnClick1, this, 2, 1, 0);

@@ -68,7 +68,7 @@ var Level2 = {
 		button4.angle += 5;
 		
 		if (score >= goToLevel3) {
-			
+			level++;
 			console.log("ON PASSE AU NIVEAU 3!!! :o");
 			
 			game.state.add('Level3', Level3);

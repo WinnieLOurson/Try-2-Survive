@@ -21,26 +21,26 @@ var Level2 = {
 	create: function () {
 		game.add.tileSprite(0, 0, 800, 600, 'background');
 
-		//  Standard button (also used as our pointer tracker)
-		button1 = game.add.button(100, 100, 'button 2.1', actionOnClick1, this, 2, 1, 0);
+		//  Rotated button
+		button1 = game.add.button(170, 100, 'button 2.1', actionOnClick1, this, 2, 1, 0);
 		button1.scale.setTo(2, 2);
 		button4.angle = 24;
 		button1.anchor.setTo(0.5, 0.5);
 
 		//  Rotated button
-		button2 = game.add.button(500, 100, 'button 2.2', actionOnClick2, this, 2, 1, 0);
+		button2 = game.add.button(570, 100, 'button 2.2', actionOnClick2, this, 2, 1, 0);
 		button2.scale.setTo(2, 2);
 		button2.angle = 24;
 		button2.anchor.setTo(0.5, 0.5);
 
-		//  Standard button (also used as our pointer tracker)
-		button3 = game.add.button(100, 500, 'button 2.3' , actionOnClick3, this, 2, 1, 0);
+		//  Rotated button
+		button3 = game.add.button(170, 500, 'button 2.3' , actionOnClick3, this, 2, 1, 0);
 		button3.scale.setTo(2, 2);
 		button3.angle = 24;
 		button3.anchor.setTo(0.5, 0.5);
 
-		//  Standard button (also used as our pointer tracker)
-		button4 = game.add.button(500, 500, 'button 2.4' , actionOnClick4, this, 2, 1, 0);
+		//  Rotated button
+		button4 = game.add.button(570, 500, 'button 2.4' , actionOnClick4, this, 2, 1, 0);
 		button4.scale.setTo(2, 2);
 		button4.angle = 24;
 		button4.anchor.setTo(0.5, 0.5);

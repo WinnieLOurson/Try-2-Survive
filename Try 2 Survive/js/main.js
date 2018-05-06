@@ -10,7 +10,7 @@ var life = 5;
 var button1, button2, button3, button4;
 var buttonA, buttonB, buttonC, buttonD;
 
-var reussite = 0, ordre = 0, textOrdre = "";
+var reussite = 0, ordre = 0, textOrdre = "", succes = 0;
 
 // c'est les conditions pour passer aux autres niveaux
 var level = 1;
@@ -90,10 +90,16 @@ function actionOnClick1 (buttonId) {
     if (ordre == 1) {
         score = score+1;
         reussite = 1;
+        succes++;
+        if (succes == 3){
+            life++;
+            succes = 0;
+        }
         actReussite(reussite);
     } else {
         life--;
         reussite = 0;
+        succes = 0;
     }
 }
 
@@ -101,10 +107,16 @@ function actionOnClick2 () {
     if (ordre == 2) { 
         score = score+1;
         reussite = 1;
+        succes++;
+        if (succes == 3){
+            life++;
+            succes = 0;
+        }
         actReussite(reussite);
     } else {
         life--;
         reussite = 0;
+        succes = 0;
     }
 }
 
@@ -112,10 +124,16 @@ function actionOnClick3 () {
     if (ordre == 3) {
         score = score+1;
         reussite = 1;
+        succes++;
+        if (succes == 3){
+            life++;
+            succes = 0;
+        }
         actReussite(reussite);
     } else {
         life--;
         reussite = 0;
+        succes = 0;
     }
 }
 
@@ -123,10 +141,16 @@ function actionOnClick4 () {
     if (ordre == 4) {
         score = score+1;
         reussite = 1;
+        succes++;
+        if (succes == 3){
+            life++;
+            succes = 0;
+        }
         actReussite(reussite);
     } else {
         life--;
         reussite = 0;
+        succes = 0;
     }
     
 }

@@ -80,6 +80,10 @@ var Level2 = {
 			game.state.add('Level3', Level3);
 			game.state.start('Level3');
 		}
+		if (life == 0) {
+			alert("T TRO NUL");
+			localStorage.setItem("last score", score);
+		}
 	},
 };
 

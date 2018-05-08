@@ -54,6 +54,12 @@ var Level3 = {
 		scoreText = game.add.bitmapText(850, 300, 'carrier_command', "score = " + score, 34);
     	scoreText.inputEnabled = true;
 		scoreText.input.enableDrag();
+
+		scoreText = game.add.bitmapText(850, 300, 'carrier_command', localStorage.getItem("item-key"), 34);
+    	scoreText.inputEnabled = true;
+		scoreText.input.enableDrag();
+
+
 		
 		ordre = nb_aleatoire(1, 4);
 		requete(ordre);
@@ -71,6 +77,11 @@ var Level3 = {
 
 		if (score == 15){
 			alert("T'AS PAS GAGNE, J'AI JUSTE PERDUE")
+			localStorage.setItem("last score", score);
+		}
+		if (life == 0) {
+			alert("T TRO NUL");
+			localStorage.setItem("last score", score);
 		}
 	}
 };

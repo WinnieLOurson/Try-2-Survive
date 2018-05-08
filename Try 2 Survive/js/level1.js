@@ -82,6 +82,7 @@ var Level1 = {
 
 		if (life == 0) {
 			alert("T TRO NUL");
+			localStorage.setItem("last score", score);
 		}
 	},
 };
